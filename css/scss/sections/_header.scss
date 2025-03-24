@@ -96,7 +96,7 @@ header {
                 color: black;
                 @include text-m;
 
-                @include sm { @include text-s; padding-right: 15px; }
+                @include sm { @include text-s; margin-right: 15px; }
                 @include lg { @include text-xs; font-size: 20px; }
             }
         }
