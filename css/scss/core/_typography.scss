@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin standard-text {
+    font-family: Balsamiq Sans;
+    color: black;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+@mixin standard-heading {
+    @include standard-text();
+}
+
+@mixin text-xss { @include standard-text(); font-size: 20px !important; }
+@mixin text-xs { @include standard-text(); font-size: 24px !important; }
+@mixin text-s { @include standard-text(); font-size: 26px !important; }
+@mixin text-m { @include standard-text(); font-size: 30px !important; }
+
+@mixin title-s { @include standard-heading(); font-size: 35px !important; }
+@mixin title-m { @include standard-heading(); font-size: 40px !important; }
