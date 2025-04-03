@@ -2,3 +2,40 @@ html, body {
     @include standard-text;
     background-color: $peach;
 }
+
+/* .wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+} */
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  } */

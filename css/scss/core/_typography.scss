@@ -11,11 +11,11 @@
     @include standard-text();
 }
 
-@mixin text-xxs { @include standard-text(); font-size: 20px !important; }
-@mixin text-xs { @include standard-text(); font-size: 24px !important; }
-@mixin text-s { @include standard-text(); font-size: 26px !important; }
-@mixin text-m { @include standard-text(); font-size: 30px !important; }
-@mixin text-l { @include standard-text(); font-size: 33px !important; }
+@mixin text-xxs { @include standard-text(); font-size: 1em !important; }
+@mixin text-xs { @include standard-text(); font-size: 1.5em !important; }
+@mixin text-s { @include standard-text(); font-size: 1.7em !important; }
+@mixin text-m { @include standard-text(); font-size: 1.9em !important; }
+@mixin text-l { @include standard-text(); font-size: 2.1em !important; }
 
 @mixin title-s { @include standard-heading(); font-size: 35px !important; }
 @mixin title-m { @include standard-heading(); font-size: 40px !important; }
