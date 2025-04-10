@@ -109,3 +109,15 @@ footer {
         }
     }
 }
+
+.page-checkout {
+    
+    @include sm {
+      footer {
+        .icons {
+          display: none;
+        }
+      }
+    }
+  }
+  

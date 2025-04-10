@@ -13,6 +13,7 @@
 
 @mixin text-xxs { @include standard-text(); font-size: 1em !important; }
 @mixin text-xss { @include standard-text(); font-size: 1.2em !important; }
+@mixin text-xsss { @include standard-text(); font-size: 1.3em !important; }
 @mixin text-xs { @include standard-text(); font-size: 1.5em !important; }
 @mixin text-s { @include standard-text(); font-size: 1.7em !important; }
 @mixin text-m { @include standard-text(); font-size: 1.9em !important; }
