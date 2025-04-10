@@ -1,0 +1,166 @@
+#product-details {
+    padding: 30px 30px 60px 30px;
+
+    .parent {
+
+        @include sm {
+            display: grid;
+            grid-template-columns: 40% auto;
+            gap: 30px;
+        }
+
+        @include lg { gap: 40px; }
+
+        .details-card-image {
+            position: relative;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .bookmark-tag {
+                position: absolute;
+                bottom: 20px;
+                right: 15px;
+                font-size: 60px;
+                border: none;
+                background-color: transparent;
+                color: black;
+
+                @include sm { display: none; }
+            }
+        }
+
+        .info {
+            padding-top: 30px;
+
+            @include sm { padding: 0; }
+
+            h2 {
+                @include title-m;
+
+                @include sm { @include title-s; }
+            }
+
+            h6 {
+                @include text-s; 
+                color: rgba(0, 0, 0, 0.603);
+                padding-top: 5px;
+
+                @include sm { 
+                    @include text-xss;
+                    color: rgba(0, 0, 0, 0.603);
+                }
+            }
+
+            .text-box {
+                @include text-s;
+                padding-top: 15px;
+
+                @include sm { @include text-xs; }
+                @include lg { padding-right: 40%; }
+            }
+
+            .price {
+                @include text-s;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                @include sm { padding-bottom: 10px; }
+            }
+
+            .basket-btn {
+                @include text-s;
+                width: 100%;
+                height: 65px;
+                border-radius: 5px;
+                transition: all 0.25s ease-in-out;
+                border: none;
+
+                @include sm { width: 240px; @include text-xs; }
+
+                &:hover {
+                    background-color: $freaky-blue;
+                    color: white;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.071);
+                }
+            }
+        }
+    }
+
+    .carousel {
+        width: 100%;
+
+        h1 {
+            @include title-s;
+            text-align: center;
+            padding-top: 60px;
+        }
+    }
+
+    .slideshow {
+        display: none;
+        padding: 30px 30px 0 30px;
+
+        @include sm { display: flex; }
+
+        .carousel-item {
+
+            .row {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 0.5rem 0.5rem;
+                gap: 10px;
+            }
+        }
+
+        .col-custom {
+
+            a { text-decoration: none; }
+        }
+
+        .product-card {
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.02);
+            }
+
+            &-footer {
+
+                .upper-text {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 1em;
+                    padding-top: 20px
+                }
+    
+                h4 { color: black; }
+    
+                p {
+                    @include text-xxs;
+                    color: rgba(0, 0, 0, 0.622);
+                    padding-top: 5px;
+                }
+            }
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: auto;
+            height: 2rem;
+            top: 40%;
+            transform: translateY(-50%);
+            z-index: 10;
+
+            &.carousel-control-prev {
+                left: -2.5rem;
+            }
+
+            &.carousel-control-next {
+                right: -2.5rem;
+            }
+        }
+    }
+}
