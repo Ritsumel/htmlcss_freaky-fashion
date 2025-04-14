@@ -1,0 +1,103 @@
+#products-admin {
+    display: flex;
+
+    .products-view-all {
+        flex: 1;
+        padding: 30px;
+
+        .product-text {
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            
+            h3 {
+                @include text-xs;
+                font-weight: 700;
+            }
+
+            .btn-soft-glow {
+                @include text-xxs;
+                width: 120px;
+                height: 45px;
+                text-decoration: none;
+                margin-top: -10px;
+                white-space: nowrap;
+            }
+        }
+    
+        .products-view {
+            display: grid; 
+            grid-template-columns: 2fr 1fr 0.5fr 0.5fr;
+            align-self: flex-start;
+            width: 100%;
+    
+            .product-details {
+                border: 1px solid black;
+                padding-bottom: 10px;
+                background-color: $dark-peach;
+    
+                h6 {
+                    font-size: 1.3em;
+                    background-color: $extra-dark-peach;
+                    color: white;
+                    margin: 0;
+                    padding-left: 5px;
+                    height: 25px;
+                    display: flex;
+                    align-items: center;
+                }
+    
+                .p1 {
+                    font-size: 1.3em;
+                    background-color: $dark-peach;
+                    margin: 0;
+                    padding-left: 5px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+    
+                .p2 {
+                    font-size: 1.3em;
+                    background-color: $light-peach;
+                    margin: 0;
+                    padding-left: 5px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .icon1 {
+                    a { text-decoration: none; color: black; }
+
+                    font-size: 1.3em;
+                    background-color: $dark-peach;
+                    margin: 0;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20%;
+                }
+
+                .icon2 {
+                    a { text-decoration: none; color: black; }
+
+                    font-size: 1.3em;
+                    background-color: $light-peach;
+                    margin: 0;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20%;
+                }
+                
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3) 
+                { border-right: none; }
+            }
+        }
+    }
+}

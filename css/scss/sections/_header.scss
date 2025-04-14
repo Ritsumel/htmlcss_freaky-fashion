@@ -52,11 +52,12 @@ header {
                 padding-left: 32px;
                 border-radius: 20px;
                 border-style: solid;
-                border-width: 2px;
-                border-color: black;
+                border-width: 3px;
+                border-color: $dark-peach;
                 height: 50px;
                 width: 100%;
                 padding-top: 5px;
+                outline: none;
 
                 @include sm { @include text-s; height: 45px; }
             }

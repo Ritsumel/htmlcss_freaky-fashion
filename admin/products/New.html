@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6a0526b489.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/site.min.css">
+    <title>Administration</title>
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header id="header-admin">
+        <h3>Administration</h3>
+    </header>
+
+    <!-- main section -->
+    <main>
+
+        <section id="new-product">
+
+            <div class="side-menu">
+                <a href="#">Produkter</a>
+            </div>
+
+            <div class="content">
+                <h3>Ny Produkt</h3>
+
+                <form class="new-product-form" method="post" action="#">
+
+                    <div class="form-group name">
+                        <label for="name">Namn</label>
+                        <input type="text" id="name" name="name" maxlength="50" placeholder="Ange namn" required>
+                    </div>
+
+                    <div class="form-group description">
+                        <label for="description">Beskrivning</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Ange beskrivning"></textarea>
+                    </div>
+
+                    <div class="form-group image-upload">
+                        <label for="image-upload">Bild</label>
+                        <input 
+                          type="file" 
+                          id="image-upload" 
+                          name="image" 
+                          accept=".png, .jpg, .jpeg, image/png, image/jpeg"
+                          required 
+                          hidden>
+                        <div class="file-upload-container">
+                            <button type="button" id="image-upload-btn" class="btn-soft-glow">Välj fil</button>
+                            <span id="image-file-name" style="font-style: italic;"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group sku">
+                        <label for="sku">SKU</label>
+                        <input
+                            type="text"
+                            id="sku"
+                            name="sku"
+                            pattern="^[A-Za-z]{3}[0-9]{3}$"
+                            title="SKU måste vara i formatet XXXYYY, där X är bokstäver och Y är siffror (t.ex. ABC123)"
+                            placeholder="Ange SKU"
+                            required>
+                    </div>
+
+                    <div class="form-group price">
+                        <label for="price">Pris</label>
+                        <input type="number" id="price" name="price" min="0" step="0.01">
+                    </div>
+
+                    <div class="form-group publication-date">
+                        <label for="publication-date">Publiseringsdatum</label>
+                        <div class="date-input">
+                            <input type="date" id="publication-date" name="publication-date" required>
+                            <span class="calendar-icon"><i class="fa-regular fa-calendar-days"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="checkboxes">
+                        <p>Kategorier</p>
+
+                        <div class="checkbox">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="checkbox-input">T-Shirts</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="checkbox-input">Sommar</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="checkbox-input">Byxor</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="checkbox-input">Skor</label>
+                        </div>
+
+                    </div>
+                    
+                    <div class="btn-submit">
+                        <button class="btn-soft-glow" type="submit">Lägg till</button>
+                    </div>
+                      
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/admin/products/site.js"></script>
+</body>
+
+</html>
