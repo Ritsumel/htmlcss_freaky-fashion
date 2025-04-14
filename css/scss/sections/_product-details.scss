@@ -85,9 +85,9 @@
 
         h1 {
             display: none;
-            @include title-s;
+            @include title-m;
             text-align: center;
-            padding-top: 60px;
+            padding-top: 80px;
 
             @include sm { display: grid; }
         }

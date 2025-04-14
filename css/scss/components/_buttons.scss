@@ -1,10 +1,12 @@
+@use '../core/color';
+
 .btn-freaky-blue {
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
     border: none;
 
     &:hover {
-        background-color: $freaky-blue;
+        background-color: color.$freaky-blue;
         color: white !important;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.071);
     }
@@ -16,7 +18,7 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    background-color: $freaky-blue; // base color
+    background-color: color.$freaky-blue; // base color
     color: white !important;
     padding: 12px 30px;
     font-size: 1.1em;
@@ -27,7 +29,7 @@
 
     // Soft glow on hover
     &:hover {
-        background-color: $light-freaky-blue; // lighter tint
+        background-color: color.$light-freaky-blue; // lighter tint
         box-shadow: 0 0 20px rgba(255, 111, 97, 0.6);
     }
 

@@ -1,6 +1,7 @@
+@use 'color';
+
 html, body {
-    @include standard-text;
-    background-color: $peach;
+    background-color: color.$peach;
     height: 100%;
     margin: 0;
 }

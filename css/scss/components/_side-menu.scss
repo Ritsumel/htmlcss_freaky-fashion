@@ -1,11 +1,14 @@
+@use '../core/color';
+@use '../core/typography';
+
 .side-menu {
     display: flex;
     min-height: 100vh;
     width: 13rem;
-    background-color: $dark-peach;
+    background-color: color.$dark-peach;
 
     a {
-        @include text-xss;
+        @include typography.text-xss;
         display: block;
         text-decoration: none;
         color: black;
